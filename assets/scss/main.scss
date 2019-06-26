@@ -18,6 +18,8 @@ $font-family: 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', 'ヒラギノ明�
 }
 
 body {
+  // necessary adding to scroll from right to left... 
+  writing-mode: vertical-rl;
   margin: 0 auto;
   font-family: 'Yu Mincho', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro', serif;
   background: #ccc;

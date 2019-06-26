@@ -3,6 +3,9 @@
   box-sizing: border-box; }
 
 body {
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
   margin: 0 auto;
   font-family: 'Yu Mincho', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro', serif;
   background: #ccc; }
