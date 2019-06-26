@@ -7,16 +7,12 @@ body {
   font-family: 'Yu Mincho', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro', serif;
   background: #ccc; }
 
-h1,
-h2,
-h3,
-h4,
-p {
-  -webkit-text-orientation: upright;
-  text-orientation: upright; }
-
 p {
   font-size: 16px; }
+
+a {
+  text-decoration: none;
+  color: #333; }
 
 section {
   width: 100%;
