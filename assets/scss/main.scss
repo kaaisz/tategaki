@@ -1,0 +1,74 @@
+$font-family: 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', 'ヒラギノ明朝 Pro', 'HGP明朝B', serif;
+
+@mixin writing-mode($mode:rl) {
+  -webkit-writing-mode: vertical-#{$mode};
+  -ms-writing-mode: tb-#{mode};
+  writing-mode: vertical-#{mode}; 
+}
+
+// apply automated font kerning - put `font-feature-settings: $palt;`
+// this feature is able to enable .otf's options
+@mixin font-feature-settings($settings: 'palt') {
+  -webkit-font-feature-settings: $settings;
+  font-feature-settings: $settings;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  font-family: 'Yu Mincho', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro', serif;
+  background: #ccc;
+}
+
+h1,
+h2, 
+h3, 
+h4, 
+p {
+  text-orientation: upright;
+}
+
+p {
+  font-size: 16px;
+}
+
+section {
+  width: 50%;
+  max-width: 800px;
+  min-width: 300px;
+  padding: 40px;
+}
+
+.tategaki {
+  & {
+    font-family: $font-family;
+    font-size: 1em;
+    line-height: 1.9;
+    letter-spacing: 0.03em;
+    // pkna is "propotional kana"
+    @include font-feature-settings('pkna');
+    @include writing-mode(rl);
+  }
+  
+  p {
+    text-indent: 1em;
+    margin-left: 30px;
+  }
+}
+
+.tategaki-b {
+  writing-mode: vertical-rl;
+  column-width: 16em;
+  column-gap: 53px;
+  height: max-content;
+  max-width: calc(90vw - 4rem);
+  margin: 2rem;
+  background: #fff;
+
+  p {
+    text-indent: 1em;
+  }
+}

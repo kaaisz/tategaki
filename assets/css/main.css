@@ -1,0 +1,59 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0 auto;
+  font-family: 'Yu Mincho', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro', serif;
+  background: #ccc; }
+
+h1,
+h2,
+h3,
+h4,
+p {
+  -webkit-text-orientation: upright;
+  text-orientation: upright; }
+
+p {
+  font-size: 16px; }
+
+section {
+  width: 50%;
+  max-width: 800px;
+  min-width: 300px;
+  padding: 40px; }
+
+.tategaki {
+  font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "ヒラギノ明朝 Pro", "HGP明朝B", serif;
+  font-size: 1em;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
+  -webkit-font-feature-settings: "pkna";
+  font-feature-settings: "pkna";
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-mode;
+  writing-mode: vertical-mode; }
+
+.tategaki p {
+  text-indent: 1em;
+  margin-left: 30px; }
+
+.tategaki-b {
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  -webkit-column-width: 16em;
+  -moz-column-width: 16em;
+  column-width: 16em;
+  -webkit-column-gap: 53px;
+  -moz-column-gap: 53px;
+  column-gap: 53px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  max-width: calc(90vw - 4rem);
+  margin: 2rem;
+  background: #fff; }
+  .tategaki-b p {
+    text-indent: 1em; }
