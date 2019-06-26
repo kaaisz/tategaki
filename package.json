@@ -9,10 +9,9 @@
     "gulp": "gulp",
     "start": "browser-sync start --server"
   },
-  "dependencies": {
-    "skrollr": "^0.6.26"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "browser-sync": "^2.26.7",
     "fs": "^0.0.1-security",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
