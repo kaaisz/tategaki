@@ -59,13 +59,12 @@ section {
   }
 }
 
-.tategaki-b {
+.tate-b {
   writing-mode: vertical-rl;
   column-width: 16em;
   column-gap: 53px;
   height: max-content;
   max-width: calc(90vw - 4rem);
-  margin: 2rem;
   background: #fff;
 
   p {

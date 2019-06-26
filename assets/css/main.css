@@ -39,7 +39,7 @@ section {
   text-indent: 1em;
   margin-left: 30px; }
 
-.tategaki-b {
+.tate-b {
   -webkit-writing-mode: vertical-rl;
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
@@ -53,7 +53,6 @@ section {
   height: -moz-max-content;
   height: max-content;
   max-width: calc(90vw - 4rem);
-  margin: 2rem;
   background: #fff; }
-  .tategaki-b p {
+  .tate-b p {
     text-indent: 1em; }
