@@ -10,6 +10,16 @@ body {
   font-family: 'Yu Mincho', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro', serif;
   background: #ccc; }
 
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+  text-combine-upright: digits 2;
+  -webkit-text-orientation: upright;
+  text-orientation: upright; }
+
 p {
   font-size: 16px; }
 
@@ -17,11 +27,60 @@ a {
   text-decoration: none;
   color: #333; }
 
+.header {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 90px;
+  height: 100vh;
+  padding: 2rem 0;
+  background: #666;
+  color: #fff; }
+
+.nav__toggle {
+  position: relative;
+  width: 30px;
+  height: 23px;
+  margin: 0 0 2rem 0; }
+
+.nav__bar {
+  position: absolute;
+  height: 2px;
+  width: 30px;
+  background: #fff; }
+  .nav__bar:nth-of-type(1) {
+    top: 0; }
+  .nav__bar:nth-of-type(2) {
+    top: 10px; }
+  .nav__bar:nth-of-type(3) {
+    bottom: 0; }
+
 section {
   width: 100%;
   max-width: 100vw;
   min-width: 300px;
   padding: 30px; }
+
+.intro {
+  -webkit-writing-mode: horizontal-tb;
+  -ms-writing-mode: lr-tb;
+  writing-mode: horizontal-tb;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 100%; }
+  .intro__text {
+    color: #fff;
+    text-align: center; }
+  .intro__title {
+    font-size: 13px; }
+  .intro__content {
+    font-size: 18px; }
 
 .tategaki {
   font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "ヒラギノ明朝 Pro", "HGP明朝B", serif;
@@ -32,7 +91,8 @@ section {
   font-feature-settings: "pkna";
   -webkit-writing-mode: vertical-rl;
   -ms-writing-mode: tb-mode;
-  writing-mode: vertical-mode; }
+  writing-mode: vertical-mode;
+  background: #ccc; }
 
 .tategaki p {
   text-indent: 1em;
