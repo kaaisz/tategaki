@@ -7,7 +7,9 @@
   <link rel="stylesheet" type="text/css"  href="assets/css/main.css">
   <title>好奇心の本棚</title>
 </head>
-<body>
+<!-- apply function for loading animation -->
+<body onload="loader()">
+  <!-- apply loading animation -->
   <header class="header">
     <nav class="nav">
       <div id="nav__toggle" class="nav__toggle">
@@ -18,15 +20,18 @@
     </nav>
     <h1>好奇心の本棚</h1>
   </header>
-  <section class="intro">
-    <div class="intro__text">
+  <section class="intro" id="intro">
+    <div class="content">
       <p class="intro__title">Introduction</p>
       <p class="intro__content">好奇心の部屋へようこそ。<br/>未知未開の知識であなたの五感を刺激し、あなたの新しい可能性の扉を開きましょう。</p>
     </div>
   </section>
-  <section>
-    <a href="tate-a.html"><h2>縦書きA(横スクロール)</h2></a>
-    <a href="tate-b.html"><h2>縦書きB(縦スクロール)</h2></a>
+  <!-- disappear main content while loading animaiton is active -->
+  <section class="main" id="main">
+    <div class="content">
+      <a href="tate-a.html"><h2>縦書きA(横スクロール)</h2></a>
+      <a href="tate-b.html"><h2>縦書きB(縦スクロール)</h2></a>
+    </div>
   </section>
 </body>
 </html>

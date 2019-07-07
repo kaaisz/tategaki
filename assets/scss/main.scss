@@ -17,7 +17,13 @@ $font-family: 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', 'ヒラギノ明�
   box-sizing: border-box;
 }
 
+html {
+  overflow: auto;
+}
+
 body {
+  width: 100%;
+  height: auto;
   // following code is necessary adding to scroll from right to left... 
   writing-mode: vertical-rl;
   margin: 0 auto;
@@ -33,7 +39,7 @@ p,
 a {
   // - not available on most of browser (unless surrounded by span)
   text-combine-upright: digits 2; 
-  text-orientation: upright;
+  // text-orientation: upright;
 }
 
 p {
@@ -49,7 +55,8 @@ a {
   display: flex;
   align-items: center;
   width: 90px;
-  height: 100vh;
+  // TODO: スクロールバーの高さ分マイナスしないとはみ出る(後でScroll barの高さをJSで取得し、その数値をここに置く)
+  height: calc(100vh - 15px);
   padding: 2rem 0;
   background: #666;
   color: #fff;
@@ -84,22 +91,22 @@ a {
 }
 
 section {
-  width: 100%;
-  max-width: 100vw;
-  min-width: 300px;
-  padding: 30px;
+  display: block;
+  min-width: 100%;
+  padding: 90px;
+}
+
+.content {
+  max-height: 30em;
 }
 
 .intro {
-  writing-mode: horizontal-tb;
   display: flex;
   align-items: center;
-  width: max-content;
-  height: 100%;
+  width: calc(100vw - 90px);
 
   &__text {
     color: #fff;
-    text-align: center;
   }
 
   &__title {
@@ -130,8 +137,9 @@ section {
 
   &.tate-b {
     writing-mode: vertical-rl;
-    column-width: 14em;
-    column-gap: 32px;
+    column-width: 12em;
+    column-gap: 30px;
     max-width: calc(100vw - 60px);
+    letter-spacing: -0.5px;
   }
 }
