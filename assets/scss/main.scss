@@ -71,7 +71,7 @@ a {
   align-items: center;
   // TODO: スクロールバーの高さ分マイナスしないとはみ出る(後でScroll barの高さをJSで取得し、その数値をここに置く)
   width: 64px;
-  height: calc(100vh - 15px);
+  // height: calc(100vh - 15px);
   background: #494949;
   color: #fff;
   padding: 2rem 0;
@@ -219,7 +219,8 @@ section {
 
   &__title {
     position: absolute;
-    margin: 90px 6.25rem 0 0;
+    margin-top: 90px;
+    margin-right: calc(100vw / 4.5);
 
     &_main,
     &_subs {

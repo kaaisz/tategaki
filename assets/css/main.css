@@ -38,7 +38,6 @@ a {
   -webkit-box-align: center;
   align-items: center;
   width: 64px;
-  height: calc(100vh - 15px);
   background: #494949;
   color: #fff;
   padding: 2rem 0; }
@@ -163,7 +162,8 @@ section {
         width: calc(50vw - 90px); } }
   .article-page__title {
     position: absolute;
-    margin: 90px 6.25rem 0 0; }
+    margin-top: 90px;
+    margin-right: calc(100vw / 4.5); }
     .article-page__title_main, .article-page__title_subs {
       margin: 0 8px; }
     .article-page__title_main {
