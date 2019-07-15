@@ -71,14 +71,13 @@ a {
   align-items: center;
   // TODO: スクロールバーの高さ分マイナスしないとはみ出る(後でScroll barの高さをJSで取得し、その数値をここに置く)
   width: 64px;
-  // height: calc(100vh - 15px);
   background: #494949;
   color: #fff;
   padding: 2rem 0;
 
   @include mq(lg) {
     width: 90px;
-    padding: 2rem 0;
+    height: calc(100vh - 15px);
   }
 
   h1 {
@@ -209,6 +208,7 @@ section {
 
   &__img {
     width: calc(100vw - 64px);
+    height: calc(100vh - 15px);
     object-fit: cover;
     position: relative;
 
@@ -221,6 +221,11 @@ section {
     position: absolute;
     margin-top: 90px;
     margin-right: calc(100vw / 4.5);
+
+    @include mq(lg) {
+      margin-top: 64px;
+      margin-right: calc(100vw / 5.5);
+    }
 
     &_main,
     &_subs {
