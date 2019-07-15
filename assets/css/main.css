@@ -13,7 +13,9 @@ body {
   writing-mode: vertical-rl;
   margin: 0 auto;
   font-family: 'Yu Mincho', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro', serif;
-  background: #ccc; }
+  background: #313131;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 h1,
 h2,
@@ -21,14 +23,14 @@ h3,
 h4,
 p,
 a {
-  text-combine-upright: digits 2; }
+  text-combine-upright: digits 2;
+  color: white; }
 
 p {
   font-size: 16px; }
 
 a {
-  text-decoration: none;
-  color: #333; }
+  text-decoration: none; }
 
 .header {
   display: -webkit-box;
@@ -37,7 +39,7 @@ a {
   align-items: center;
   width: 64px;
   height: calc(100vh - 15px);
-  background: #666;
+  background: #494949;
   color: #fff;
   padding: 2rem 0; }
   @media screen and (min-width: 1000px) {
@@ -108,7 +110,8 @@ section {
   .article__img {
     width: 100%;
     -o-object-fit: cover;
-    object-fit: cover; }
+    object-fit: cover;
+    box-shadow: 0 10px 20px #252525; }
   .article__title {
     position: absolute;
     top: 0;
@@ -125,8 +128,7 @@ section {
   font-feature-settings: "pkna";
   -webkit-writing-mode: vertical-rl;
   -ms-writing-mode: tb-mode;
-  writing-mode: vertical-mode;
-  background: #ccc; }
+  writing-mode: vertical-mode; }
 
 .tategaki p {
   text-indent: 1em;

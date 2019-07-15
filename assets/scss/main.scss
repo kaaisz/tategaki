@@ -41,7 +41,9 @@ body {
   writing-mode: vertical-rl;
   margin: 0 auto;
   font-family: 'Yu Mincho', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro', serif;
-  background: #ccc;
+  background: #313131;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
@@ -53,6 +55,7 @@ a {
   // - not available on most of browser (unless surrounded by span)
   text-combine-upright: digits 2; 
   // text-orientation: upright;
+  color: white;
 }
 
 p {
@@ -61,7 +64,6 @@ p {
 
 a {
   text-decoration: none;
-  color: #333;
 }
 
 .header{
@@ -70,7 +72,7 @@ a {
   // TODO: スクロールバーの高さ分マイナスしないとはみ出る(後でScroll barの高さをJSで取得し、その数値をここに置く)
   width: 64px;
   height: calc(100vh - 15px);
-  background: #666;
+  background: #494949;
   color: #fff;
   padding: 2rem 0;
 
@@ -163,6 +165,7 @@ section {
   &__img {
     width: 100%;
     object-fit: cover;
+    box-shadow: 0 10px 20px #252525;
   } 
 
   &__title {
@@ -183,7 +186,6 @@ section {
     // pkna is "propotional kana"
     @include font-feature-settings('pkna');
     @include writing-mode(rl);
-    background: #ccc;
   }
   
   p {
