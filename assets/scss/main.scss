@@ -169,10 +169,36 @@ section {
 
   &__title {
     position: absolute;
-    top: 0;
-    right: 0;
-    margin: 2rem 2rem 0 0;
-    color: white;
+    
+    &.ptrn-a {
+      top: 0;
+      right: 0;
+      margin: 2rem 2rem 0 0;
+      color: white;
+    }
+
+    &.ptrn-b {
+      top: 0;
+      right: 36%;
+      margin: 2rem auto;
+    }
+
+    &.ptrn-c {
+      top: 0;
+      right: initial;
+      left: 0;
+      margin: 2rem 0 0 2rem;
+    }
+
+    &_main {
+      margin: 0 4px;
+      font-size: 22px;
+    }
+
+    &_subs {
+      margin: 0 4px;
+      font-size: 14px;
+    }
   }
 }
 
