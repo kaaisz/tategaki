@@ -140,7 +140,7 @@ section {
   width: calc(100vw - 64px);
 
   @include mq(lg) {
-    width: calc(100 - 90px);
+    width: calc(100vw - 90px);
   }
 
   &__text {
@@ -199,5 +199,39 @@ section {
     column-gap: 30px;
     max-width: calc(100vw - 60px);
     letter-spacing: -0.5px;
+  }
+}
+
+.article-page {
+  display: flex;
+  flex-direction: column;
+  
+
+  &__img {
+    width: calc(100vw - 64px);
+    object-fit: cover;
+    position: relative;
+
+    @include mq(lg) {
+      width: calc(50vw - 90px);
+    }
+  }
+
+  &__title {
+    position: absolute;
+    margin: 90px 6.25rem 0 0;
+
+    &_main,
+    &_subs {
+      margin: 0 8px;
+    }
+
+    &_main {
+      font-size: 28px;
+    }
+
+    &_subs {
+      font-size: 18px;
+    }
   }
 }
