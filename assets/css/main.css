@@ -35,11 +35,18 @@ a {
   display: flex;
   -webkit-box-align: center;
   align-items: center;
-  width: 90px;
+  width: 64px;
   height: calc(100vh - 15px);
-  padding: 2rem 0;
   background: #666;
-  color: #fff; }
+  color: #fff;
+  padding: 2rem 0; }
+  @media screen and (min-width: 1000px) {
+    .header {
+      width: 90px;
+      padding: 2rem 0; } }
+  .header h1 {
+    font-size: 32px;
+    margin: 0; }
 
 .nav__toggle {
   position: relative;
@@ -62,23 +69,52 @@ a {
 section {
   display: block;
   min-width: 100%;
-  padding: 90px; }
+  padding: 64px; }
 
-.content {
+.content,
+.content.shelf {
   max-height: 30em; }
+
+.content.shelf {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center; }
 
 .intro {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
   align-items: center;
-  width: calc(100vw - 90px); }
+  width: calc(100vw - 64px); }
+  @media screen and (min-width: 1000px) {
+    .intro {
+      width: calc(100 - 90px); } }
   .intro__text {
     color: #fff; }
   .intro__title {
     font-size: 13px; }
   .intro__content {
     font-size: 18px; }
+
+.article {
+  position: relative;
+  width: 16rem;
+  height: 22rem;
+  margin: 2rem; }
+  .article__img {
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover; }
+  .article__title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2rem 2rem 0 0;
+    color: white; }
 
 .tategaki {
   font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "ヒラギノ明朝 Pro", "HGP明朝B", serif;

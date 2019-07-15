@@ -67,12 +67,22 @@ a {
 .header{
   display: flex;
   align-items: center;
-  width: 90px;
   // TODO: スクロールバーの高さ分マイナスしないとはみ出る(後でScroll barの高さをJSで取得し、その数値をここに置く)
+  width: 64px;
   height: calc(100vh - 15px);
-  padding: 2rem 0;
   background: #666;
   color: #fff;
+  padding: 2rem 0;
+
+  @include mq(lg) {
+    width: 90px;
+    padding: 2rem 0;
+  }
+
+  h1 {
+    font-size: 32px;
+    margin: 0;
+  }
 }
 
 .nav {
@@ -106,17 +116,30 @@ a {
 section {
   display: block;
   min-width: 100%;
-  padding: 90px;
+  padding: 64px;
+}
+
+.content,
+.content.shelf {
+  max-height: 30em;
 }
 
 .content {
-  max-height: 30em;
+  &.shelf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .intro {
   display: flex;
   align-items: center;
-  width: calc(100vw - 90px);
+  width: calc(100vw - 64px);
+
+  @include mq(lg) {
+    width: calc(100 - 90px);
+  }
 
   &__text {
     color: #fff;
@@ -128,6 +151,26 @@ section {
 
   &__content {
     font-size: 18px;
+  }
+}
+
+.article {
+  position: relative;
+  width: 16rem;
+  height: 22rem;
+  margin: 2rem;
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+  } 
+
+  &__title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2rem 2rem 0 0;
+    color: white;
   }
 }
 
